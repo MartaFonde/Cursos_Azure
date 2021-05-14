@@ -1,0 +1,8 @@
+$ code .
+
+PS /home/marta> Get-Module 
+
+> New-AzVm ` -ResourceGroupName "CrmTestingResourceGroup" ` -Name "CrmUnitTests" ` -Image "UbuntuLTS" `...
+Gestión mv
+
+>Get-Help -Name Get-AzSubscription
