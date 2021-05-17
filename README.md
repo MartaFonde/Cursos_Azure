@@ -145,32 +145,32 @@ Blob Access Policies: Proporciona un nivel adicional de control sobre SAS del la
 
  Blob Storage Pricing -> Costos cuentas de almacenamientos: servicio (blobs ó files), acceso a datos, transacción, transferencia de datos de Geo-Replicación, transferencia de datos de salientes (desde fuera de Azure), cambiar de nivel de almacenamiento
 
- Práctica: 
- Creación contenedor
- Subir un blob de bloques
- Descargar un blob de bloques
+ Práctica:  
+ Creación contenedor  
+ Subir un blob de bloques  
+ Descargar un blob de bloques  
  Explore con Storage Explorer
 
-- **Azure Files**
-Archivos compartidos gestionados en la nube a los que se puede acceder a través de SMB 
-[Azure Files vs Azure Blobs](https://github.com/MartaFonde/Cursos_Azure/blob/master/4.2_Archivos_vs_Blobs.pdf)
-Azure Files -> uds montadas de disco que se puede compartir entre varias cargas de trabajo (MV). 
-Azure Blobs -> sistema de compartición a gran escala de ficheros divididos en bloques, en containers. 
+- **Azure Files**  
+Archivos compartidos gestionados en la nube a los que se puede acceder a través de SMB   
+[Azure Files vs Azure Blobs](https://github.com/MartaFonde/Cursos_Azure/blob/master/4.2_Archivos_vs_Blobs.pdf)  
+Azure Files -> uds montadas de disco que se puede compartir entre varias cargas de trabajo (MV).  
+Azure Blobs -> sistema de compartición a gran escala de ficheros divididos en bloques, en containers.   
 
 **Crear unidades de disco compartido** en portal y PowerShell
 
-Asignación de archivos compartidos en Windows (Mapear uds de Azure Files en Windows)
-Asignación de archivos compartidos en Linux
+Asignación de archivos compartidos en Windows (Mapear uds de Azure Files en Windows)  
+Asignación de archivos compartidos en Linux  
 
-**Habilitar el uso de protocolo seguro https** en nuestra cuenta de almacenamiento.
-A diferencia de Azure Blobs, en Files siempre será requisito.
+**Habilitar el uso de protocolo seguro https** en nuestra cuenta de almacenamiento.  
+A diferencia de Azure Blobs, en Files siempre será requisito.  
 Configuración de la cuenta de almacenamiento (no desde Files).
 
 **Crear instantáneas de archivos compartidos** <- recuperar ficheros. 
 
-Práctica:
-Crear recurso compartido de archivos y subir un archivo
-Administrar instantáneas.
-Crear un recurso compartido de archivos (PowerShell).
-Montar un recurso compartido de archivos (PowerShell).
+Práctica:  
+Crear recurso compartido de archivos y subir un archivo  
+Administrar instantáneas.  
+Crear un recurso compartido de archivos (PowerShell).  
+Montar un recurso compartido de archivos (PowerShell).  
 
