@@ -1,14 +1,17 @@
-## Cursos_Azure ##
+## Cursos Azure ##
+En Openwebinars    
 
-En Openwebinars  
+[1. Curso de administración de Azure](https://openwebinars.net/academia/portada/administracion-azure/)
+[2. Curso de almacenamiento en Azure](https://openwebinars.net/academia/portada/almacenamiento-azure/)
 
+***
 **14/05/2021**  
 ### Curso de Administración de Azure ###
 - **Portal Azure y Cloud Shell**  
 Portal Azure: Administración completa de los recursos y de todos los elementos que contienen estos recursos. Crear paneles personalizados de usuarios. Acceso a Cloud Shell. Recibir notificaciones.  
-Aplicación móvil Azure: Gestión suscripciones, rescursos, consola Cloud Shell, notificaciones.  
+Aplicación móvil Azure: Gestión suscripciones, rescursos, consola Cloud Shell, notificaciones...  
 Demostración - Funcionamiento del Portal Azure: Ayuda (documentación) y atajos de teclado, personalización  
-**Cloud Shell**: Bash o PowerShell. Temporal (por sesión, por usuario). Hosteada por máquina virtual administrada por el Portal. Requiere un grupo de recursos, una cuenta de almacenamiento y Azure File share. Permisos -> Bash. Tiempo de espera 20'   
+**Cloud Shell**: Bash o PowerShell. Temporal (por sesión, por usuario). Hosteada por máquina virtual administrada por el Portal. Requiere un grupo de recursos, una cuenta de almacenamiento y Azure File share. Permisos -> Bash.  
 
 Acceso con prueba gratuita.  
 
@@ -24,7 +27,7 @@ Módulo Azure PowerShell: contiene librerías (cmdlets) para gestionar recursos 
 Práctica en Local  
 Cmdlets válidos en PowerShell Code y Windows PowerShell con paquete de módulos.  
 
-**CLI**: Gestionar recursos Azure **multiplataforma** (= scripts)  
+**CLI**: Gestionar recursos Azure **multiplataforma**   
 Motor de ejecución Python  
 Comandos estructurados en grupos y subgrupos  
 find para localizar comandos  
@@ -34,8 +37,8 @@ az vm restart -g MyResourceGroup -n MyVm
 (grupo) az --> (subgrupo) vm 
 az vm --help  
 
-Práctica:
-[Instalación](https://docs.microsoft.com/es-es/cli/azure/install-azure-cli)
+Práctica:  
+[Instalación](https://docs.microsoft.com/es-es/cli/azure/install-azure-cli)  
 Login con Azure
 Crear resource group 
 
@@ -57,21 +60,20 @@ APIs integra soluciones que hablen directamente contra el gestor de la plataform
     - Sintaxis Declarativa: es lo que utiliza una plantilla para indicar lo que pretende crear. Definición del objeto. p.ej. Nombre cuenta almacenamiento + tipo de replicación de la cuenta)
   
 **Implementaciones**: 
-Los recursos sólo pueden existir en grupos de recursos. Los grupos de recursos no se pueden renombrar. Pueden tener recursos de varios tipos diferentes (servicios), diferentes proveedores, y de diferentes regiones. Las implementaciones son incrementales. Podemos eliminar recursos dentro de un grupo de manera imperativa. Los recursos dentro del grupo deberían tener el mismo ciclo de vida, misma solución. Al eliminar o crear, todos. Cada recurso sólo puede estar en un único grupo. Los grupos se pueden usar también para establecer permisos, seguridad.
+Los recursos sólo pueden existir en grupos de recursos. Los grupos de recursos no se pueden renombrar. Pueden tener recursos de varios tipos diferentes (servicios), diferentes proveedores, y de diferentes regiones. Las implementaciones son incrementales. Podemos eliminar recursos dentro de un grupo de manera imperativa. Los recursos dentro del grupo deberían tener el mismo ciclo de vida, misma solución (al eliminar o crear, sobre todos). Cada recurso sólo puede estar en un único grupo. Los grupos se pueden usar también para establecer permisos, seguridad.
 **Bloqueo de recursos a través de Resource Manager**
 Medida preventiva para evitar modificación (sólo lectura) y eliminación de recursos (permite modificación). Asignable a suscripción, grupos, o recurso concreto (instancia).  
 **Mover recursos dentro de ARM** entre grupos o suscripciones.
-Desde portal o desde PowerShell o CLI. Bloquea grupo, capa de gestión, durante la operación. Sigue prestando servicio. Hay servicios que no se pueden mover 
-[Documentación](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources) 
+Desde portal o desde PowerShell o CLI. Bloquea grupo, capa de gestión, durante la operación. Sigue prestando servicio. Hay servicios que no se pueden mover ([Ver Documentación](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources))
 
 **Eliminar recursos ARM**: 
 Remove-AzResourceGroup -Name "ContosoRG01"  
 Remove-AzResource -ResourceId <ResourceID>  
 
-**Práctica: Bloqueo Grupos de recursos**
+Práctica: Bloqueo Grupos de recursos
 
 - **Plantilla ARM**
-Fichero JSON que contiene la definición de una solución completa compuesta de recursos. Permite reducir errores al implementar recurso. No es imperativo (no necesitamos saber los comandos), las acciones las realiza la plataforma. Sólo las definimos. Podemos reutilizarlas. Modularizar y enlazarp plantillas. Simplica orquestación, podemos generar automatismos. 
+Fichero JSON que contiene la definición de una solución completa compuesta de recursos. Permite reducir errores al implementar recurso. No es imperativo (no necesitamos saber los comandos), las acciones las realiza la plataforma. Modularizar y enlazar plantillas. 
 **Esquema**
  ~~~
 {
@@ -92,9 +94,83 @@ Variables: valores usados a través de la plantilla
 [Documentación variables](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-variables?tabs=json)
 
 **Plantillas QuickStart** 
-Plantillas precreadas.
 [Documentación ARM templates](https://azure.microsoft.com/es-es/resources/templates/)  
 
 [Plantillas](https://github.com/Azure/azure-quickstart-templates/)
 
 Ejemplo creación nuevo recurso usando PowerShell y plantillas de Resource Manager.
+ ***
+**17/05/2021**  
+### Curso de almacenamiento en Azure ###
+- **Almacenamiento de cuentas**
+Azure Storage: Servicio que puede usar para almacenar archivos, mensajes, tablas y otros tipos de información.  
+Tres categorías de almacenamiento de Azure:
+  - Almacenamiento para máquinas virtuales: discos y recursos compartidos de archivos 
+  - Datos no estructurados - Blobs y Data Lake Store
+  - Datos estructurados: tablas, Cosmos DB y Azure SQL DB
+
+SERVICIOS AZURE STORAGE 
+Azure Blobs: un almacén de objetos masivamente escalable para texto y datos binarios 
+Archivos de Azure: recursos compartidos de archivos administrados para implementaciones en la nube o locales 
+Tablas de Azure: un almacén NoSQL para almacenamiento de datos estructurados sin esquemas 
+Azure Queues: un almacén de mensajería para mensajería confiable entre componentes de la aplicación
+
+Práctica: creación de cuenta de almacenamiento desde portal, PowerShell y CLI  
+
+**Azure Storage Explorer**  
+Acceder a múltiples cuentas y suscripciones (de todo tipo). Crear, eliminar, ver, editar recursos de almacenamiento. Ver y editar Blob, Queue, Table, File, Cosmos DB Storage y Data Lake StoragE.  
+Crear claves de firma de acceso compartido (SAS).  
+Multiplataforma.  
+Opciones de conexión: suscripción, almacenamiento de desarrollo local (emulador), adjuntando a almacenamiento externo, utilizando una firma de acceso compartido ó con una cuenta de Azure Cosmos DB mediante una cadena de conexión.  
+
+Práctica:  
+[Instalación Storage Explorer](https://azure.microsoft.com/es-es/features/storage-explorer/)  
+Conexión a una suscripción de Azure  
+Adjuntar una cuenta de almacenamiento de Azure
+
+- **Almacenamiento Blob** 
+Blob Storage: Almacena datos no estructurados en la nube. Puede almacenar cualquier tipo de texto o datos binarios. También se conoce como almacenamiento de objetos. URI propia.
+Todos los blobs deben estar en un contenedor. Nº de containers y blobs ilimitado.  
+Niveles de acceso: Private, Blob, Container
+
+Blob Performance Tiers: Hot (diario), Cool (30 días), Archive (180 días) -> Coste
+
+Uploading blobs. Tres formatos de envío (empaquetado):
+Bloquear blobs (predeterminado): útil para almacenar texto o archivos binarios 
+Blobs de página: más eficientes para operaciones frecuentes de lectura/escritura. Discos MV  
+Agregar blobs: útil para los escenarios de registro   
+=> No puede cambiar un tipo de blob una vez que se ha creado
+
+Blob Access Policies: Proporciona un nivel adicional de control sobre SAS del lado del servidor. Agrupa SAS para proporcionar restricciones adicionales para firmas vinculadas a la política. Compatible con contenedores de blobs, archivos compartidos, tablas y colas
+
+ Blob Storage Pricing -> Costos cuentas de almacenamientos: servicio (blobs ó files), acceso a datos, transacción, transferencia de datos de Geo-Replicación, transferencia de datos de salientes (desde fuera de Azure), cambiar de nivel de almacenamiento
+
+ Práctica: 
+ Creación contenedor
+ Subir un blob de bloques
+ Descargar un blob de bloques
+ Explore con Storage Explorer
+
+- **Azure Files**
+Archivos compartidos gestionados en la nube a los que se puede acceder a través de SMB 
+[Azure Files vs Azure Blobs](https://github.com/MartaFonde/Cursos_Azure/blob/master/4.2_Archivos_vs_Blobs.pdf)
+Azure Files -> uds montadas de disco que se puede compartir entre varias cargas de trabajo (MV). 
+Azure Blobs -> sistema de compartición a gran escala de ficheros divididos en bloques, en containers. 
+
+**Crear unidades de disco compartido** en portal y PowerShell
+
+Asignación de archivos compartidos en Windows (Mapear uds de Azure Files en Windows)
+Asignación de archivos compartidos en Linux
+
+**Habilitar el uso de protocolo seguro https** en nuestra cuenta de almacenamiento.
+A diferencia de Azure Blobs, en Files siempre será requisito.
+Configuración de la cuenta de almacenamiento (no desde Files).
+
+**Crear instantáneas de archivos compartidos** <- recuperar ficheros. 
+
+Práctica:
+Crear recurso compartido de archivos y subir un archivo
+Administrar instantáneas.
+Crear un recurso compartido de archivos (PowerShell).
+Montar un recurso compartido de archivos (PowerShell).
+
