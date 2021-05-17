@@ -109,11 +109,11 @@ Tres categorías de almacenamiento de Azure:
   - Datos no estructurados - Blobs y Data Lake Store
   - Datos estructurados: tablas, Cosmos DB y Azure SQL DB
 
-SERVICIOS AZURE STORAGE 
-Azure Blobs: un almacén de objetos masivamente escalable para texto y datos binarios 
-Archivos de Azure: recursos compartidos de archivos administrados para implementaciones en la nube o locales 
-Tablas de Azure: un almacén NoSQL para almacenamiento de datos estructurados sin esquemas 
-Azure Queues: un almacén de mensajería para mensajería confiable entre componentes de la aplicación
+SERVICIOS AZURE STORAGE  
+Azure Blobs: un almacén de objetos masivamente escalable para texto y datos binarios  
+Archivos de Azure: recursos compartidos de archivos administrados para implementaciones en la nube o locales  
+Tablas de Azure: un almacén NoSQL para almacenamiento de datos estructurados sin esquemas  
+Azure Queues: un almacén de mensajería para mensajería confiable entre componentes de la aplicación  
 
 Práctica: creación de cuenta de almacenamiento desde portal, PowerShell y CLI  
 
@@ -135,12 +135,12 @@ Niveles de acceso: Private, Blob, Container
 
 Blob Performance Tiers: Hot (diario), Cool (30 días), Archive (180 días) -> Coste
 
-Uploading blobs. Tres formatos de envío (empaquetado):
-Bloquear blobs (predeterminado): útil para almacenar texto o archivos binarios 
-Blobs de página: más eficientes para operaciones frecuentes de lectura/escritura. Discos MV  
-Agregar blobs: útil para los escenarios de registro   
-=> No puede cambiar un tipo de blob una vez que se ha creado
-
+Uploading blobs. Tres formatos de envío (empaquetado):  
+Bloquear blobs (predeterminado): útil para almacenar texto o archivos binarios  
+Blobs de página: más eficientes para operaciones frecuentes de lectura/escritura. Discos MV   
+Agregar blobs: útil para los escenarios de registro  
+=> No puede cambiar un tipo de blob una vez que se ha creado  
+ 
 Blob Access Policies: Proporciona un nivel adicional de control sobre SAS del lado del servidor. Agrupa SAS para proporcionar restricciones adicionales para firmas vinculadas a la política. Compatible con contenedores de blobs, archivos compartidos, tablas y colas
 
  Blob Storage Pricing -> Costos cuentas de almacenamientos: servicio (blobs ó files), acceso a datos, transacción, transferencia de datos de Geo-Replicación, transferencia de datos de salientes (desde fuera de Azure), cambiar de nivel de almacenamiento
