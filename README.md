@@ -1,7 +1,7 @@
 ## Cursos Azure ##
 En Openwebinars    
 
-[1. Curso de administración de Azure](https://openwebinars.net/academia/portada/administracion-azure/)
+[1. Curso de administración de Azure](https://openwebinars.net/academia/portada/administracion-azure/)  
 [2. Curso de almacenamiento en Azure](https://openwebinars.net/academia/portada/almacenamiento-azure/)
 
 ***
@@ -73,7 +73,8 @@ Remove-AzResource -ResourceId <ResourceID>
 Práctica: Bloqueo Grupos de recursos
 
 - **Plantilla ARM**
-Fichero JSON que contiene la definición de una solución completa compuesta de recursos. Permite reducir errores al implementar recurso. No es imperativo (no necesitamos saber los comandos), las acciones las realiza la plataforma. Modularizar y enlazar plantillas. 
+Fichero JSON que contiene la definición de una solución completa compuesta de recursos. Permite reducir errores al implementar recurso. No es imperativo (no necesitamos saber los comandos), las acciones las realiza la plataforma. Modularizar y enlazar plantillas.  
+
 **Esquema**
  ~~~
 {
@@ -86,6 +87,7 @@ Fichero JSON que contiene la definición de una solución completa compuesta de 
     "outputs":{ }
 }
 ~~~
+
 Parámetros: valores configurables cuando se ejecuta la plantilla.
 [Documentación parámetros](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-parameters?tabs=json)
 
@@ -99,6 +101,7 @@ Variables: valores usados a través de la plantilla
 [Plantillas](https://github.com/Azure/azure-quickstart-templates/)
 
 Ejemplo creación nuevo recurso usando PowerShell y plantillas de Resource Manager.
+
  ***
 **17/05/2021**  
 ### Curso de almacenamiento en Azure ###
@@ -153,7 +156,7 @@ Blob Access Policies: Proporciona un nivel adicional de control sobre SAS del la
 
 - **Azure Files**  
 Archivos compartidos gestionados en la nube a los que se puede acceder a través de SMB   
-[Azure Files vs Azure Blobs](https://github.com/MartaFonde/Cursos_Azure/blob/master/4.2_Archivos_vs_Blobs.pdf)  
+[Azure Files vs Azure Blobs](https://github.com/MartaFonde/Cursos_Azure/blob/master/AlmacenamientoAzure/AzureFiles/4.2_Archivos_vs_Blobs.pdf)  
 Azure Files -> uds montadas de disco que se puede compartir entre varias cargas de trabajo (MV).  
 Azure Blobs -> sistema de compartición a gran escala de ficheros divididos en bloques, en containers.   
 
@@ -173,4 +176,26 @@ Crear recurso compartido de archivos y subir un archivo
 Administrar instantáneas.  
 Crear un recurso compartido de archivos (PowerShell).  
 Montar un recurso compartido de archivos (PowerShell).  
+
+**18/05/2021**
+- **Seguridad de almacenamiento**
+Storage Service Encryption (SSE): encripta automáticamente todos los ficheros que almacenamos en azure.  
+Autenticación con Azure AD (roles) y RBAC  
+Encriptado Azure disk  
+Claves compartidas  
+Client-side encriptado, HTTPS y SMB3.0 para datos de tránsito  
+Acceso anónimo a blobs y containers  
+Shared Access Signatures (SAS) -> Sistema de acceso compartido. Permisos de acceso a los
+usuarios, niveles. Por directivas, no por URI  
+!!! Llave SAS vinculada a key primaria/secundaria. Si rebocamos una key todas las llaves SAS que dependan de ella se van a rebocar, las tendríamos que volver a generar.  
+Un SAS es un URI que apunta a a uno o más recursos de almacenamiento.  
+URI+SASToken (?sv=...)  -> Parámetros SAS  
+
+Práctica: SAS Portal. Crear un SAS a nivel servicio y a nivel cuenta.  
+
+Customer Managed Keys -> Azure Key Vault, desde API, PowerShell ó CLI  
+
+Práctica: SAS Storage Explorer  
+Generar una cadena de conexión SAS para la cuenta que se desea compartir.    
+Adjuntar a una cuenta de almacenamiento mediante  una cadena de conexión SAS
 
