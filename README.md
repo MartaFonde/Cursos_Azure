@@ -3,6 +3,7 @@ En Openwebinars
 
 [1. Curso de administración de Azure](https://openwebinars.net/academia/portada/administracion-azure/)  
 [2. Curso de almacenamiento en Azure](https://openwebinars.net/academia/portada/almacenamiento-azure/)
+[3. Curso de protección de datos en Azure](https://openwebinars.net/academia/portada/proteccion-datos-azure/)
 
 ***
 **14/05/2021**  
@@ -197,5 +198,37 @@ Customer Managed Keys -> Azure Key Vault, desde API, PowerShell ó CLI
 
 Práctica: SAS Storage Explorer  
 Generar una cadena de conexión SAS para la cuenta que se desea compartir.    
-Adjuntar a una cuenta de almacenamiento mediante  una cadena de conexión SAS
+Adjuntar a una cuenta de almacenamiento mediante  una cadena de conexión SAS  
 
+**19/05/2021**
+### Curso de Protección de datos en Azure ###
+- **Replicación de datos**: Necesariamente. 3 copias del dato -> estrategias de replicación:
+Redundancia local: Mantiene 3 copias de datos en una sola instalación.  
+Redundancia de zonas: replica sus datos en tres clusters de almacenamiento en una sola región. Cada clúster está físicamente separado, propia zona de disponibilidad, autónoma.  
+Redundancia geográfica: 6 copias del dato. Vínculada región primaria-secundaria. 
+Redundancia geográfica con acceso a lectura  
+
+**20/05/2021**  
+**Copias de seguridad**
+Servicio BackUp  
+Opciones del almacén de copias de seguridad -> Workload running: Azure / On-Premise / Local
+
+Práctica: Copias de seguridad de archivos compartidos  
+Crear un almacén de (copias) seguridad  
+Configurar el almacén  
+Explorar la información de monotorización  
+
+Implementar copias de seguridad locales de archivos y carpetas -> Agente MARS servicio
+No puedo descargar el programa por falta de espacio en el disco)
+[install Agente MARS](https://docs.microsoft.com/en-us/azure/backup/install-mars-agent)  
+
+- **Copias de seguridad en MV**  
+  - Azure Site Recovery (ASR): replica MV de Azure de una región de Azure a otra. MVware locakes, HyperV-, servidores físicos (Windows y Linux), MV de Azure Stack a Azure.  
+Desde servidores físicos en un sitio secundario. Se reduce coste infraestrutura. Migraciones.  
+  - AzureBackup Server.
+  - Snapshots
+
+Arquitectura de Azure a Azure , recuperación de datos en MV con ASR. Cambio dirección flujo datos.  
+On-premise  
+
+**Servidor de respaldo de Azure**: DPM/MABS y ek agente MARS para gestión y monitorización políticas. Flexibilidad y opciones de prog granular.  
