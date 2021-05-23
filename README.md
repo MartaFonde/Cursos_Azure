@@ -4,6 +4,7 @@ En Openwebinars
 [1. Curso de administración de Azure](https://openwebinars.net/academia/portada/administracion-azure/)  
 [2. Curso de almacenamiento en Azure](https://openwebinars.net/academia/portada/almacenamiento-azure/)
 [3. Curso de protección de datos en Azure](https://openwebinars.net/academia/portada/proteccion-datos-azure/)
+[4. Curso de Redes Virtuales](https://openwebinars.net/academia/portada/redes-virtuales-azure/)
 
 ***
 **14/05/2021**  
@@ -202,10 +203,10 @@ Adjuntar a una cuenta de almacenamiento mediante  una cadena de conexión SAS
 
 **19/05/2021**
 ### Curso de Protección de datos en Azure ###
-- **Replicación de datos**: Necesariamente. 3 copias del dato -> estrategias de replicación:
+- **Replicación de datos**: Necesariamente. 3 copias del dato -> estrategias de replicación:  
 Redundancia local: Mantiene 3 copias de datos en una sola instalación.  
 Redundancia de zonas: replica sus datos en tres clusters de almacenamiento en una sola región. Cada clúster está físicamente separado, propia zona de disponibilidad, autónoma.  
-Redundancia geográfica: 6 copias del dato. Vínculada región primaria-secundaria. 
+Redundancia geográfica: mín 6 copias del dato. Vínculada región primaria-secundaria. 
 Redundancia geográfica con acceso a lectura  
 
 **20/05/2021**  
@@ -218,8 +219,8 @@ Crear un almacén de (copias) seguridad
 Configurar el almacén  
 Explorar la información de monotorización  
 
-Implementar copias de seguridad locales de archivos y carpetas -> Agente MARS servicio
-No puedo descargar el programa por falta de espacio en el disco)
+Implementar copias de seguridad locales de archivos y carpetas -> Agente MARS servicio  
+No puedo descargar el programa por falta de espacio en el disco)  
 [install Agente MARS](https://docs.microsoft.com/en-us/azure/backup/install-mars-agent)  
 
 - **Copias de seguridad en MV**  
@@ -232,3 +233,30 @@ Arquitectura de Azure a Azure , recuperación de datos en MV con ASR. Cambio dir
 On-premise  
 
 **Servidor de respaldo de Azure**: DPM/MABS y ek agente MARS para gestión y monitorización políticas. Flexibilidad y opciones de prog granular.  
+
+***
+
+**22/05/2021**  
+### Curso de Redes Virtuales ###  
+- **Redes Virtuales**
+  Componentes de red: Servicios capa Networking -> Balanceador de cargas, DNS, Application Gateway, VPN Gateway, ExpressRoute, Content Delivery Network, Traffic Manager, Network Watcher  
+
+**23/05/2021**  
+Red Virtual -> Subredes -> Interfaces de las MV (tienen que tener al menos 1 NIC). Red virtual limitada a una región. Posible conexión interregional. Conexiones VPN entre redes virtuales on-premises, privadas... nube híbrida.  
+
+**Subredes** segmentos virtuales que dividen los espacios de direcciones de una red virtual. Comunicación entre si, y de incorporarle gateways con IP públicas que podrán lanzar VNP y conectarse también a redes que tengamos on-premises y en otras redes/subredes virtuales que estean en Azure.  
+ 
+Práctica: Creación de red virtual desde Portal y desde Powershell y CLI  
+
+NIC múltiples en MV: IP+MAC asociado a cada interfaz de red. Múltiples NIC para gestión de tráfico de red, aislamiento del tráfico y para dispositivos virtuales. Tamaño VM -> cant de NIC admisibles.   
+Conexión entre MV entre subredes de la misma red virtual (no entre redes virtuales)  
+
+Práctica: Creación VM con varias NICs con CLI
+
+- **IP Addressing**
+IP Pública y privada (dentro de la red virtual). IP estáticas o dinámicas.  
+
+Práctica: Administración de IP Addresses con PowerShell.  
+Recuperar información de dirección IP privada estática.  
+Pasar IP de estática a dinámica.  
+ELiminar una dirección IP privada estática.  
