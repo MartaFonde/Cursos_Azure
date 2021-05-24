@@ -2,9 +2,9 @@
 En Openwebinars    
 
 [1. Curso de administración de Azure](https://openwebinars.net/academia/portada/administracion-azure/)  
-[2. Curso de almacenamiento en Azure](https://openwebinars.net/academia/portada/almacenamiento-azure/)
-[3. Curso de protección de datos en Azure](https://openwebinars.net/academia/portada/proteccion-datos-azure/)
-[4. Curso de Redes Virtuales](https://openwebinars.net/academia/portada/redes-virtuales-azure/)
+[2. Curso de almacenamiento en Azure](https://openwebinars.net/academia/portada/almacenamiento-azure/)  
+[3. Curso de protección de datos en Azure](https://openwebinars.net/academia/portada/proteccion-datos-azure/)  
+[4. Curso de Redes Virtuales](https://openwebinars.net/academia/portada/redes-virtuales-azure/)  
 
 ***
 **14/05/2021**  
@@ -260,3 +260,23 @@ Práctica: Administración de IP Addresses con PowerShell.
 Recuperar información de dirección IP privada estática.  
 Pasar IP de estática a dinámica.  
 ELiminar una dirección IP privada estática.  
+
+**24/05/2021**  
+Service Endpoints: mediante una IP privada conecta a nuestra red privada servicios de la capa pública de Azure. +Seguridad recursos (Azure Storage, Azure SQL, Cosmos DB, KeyVault, EventHub, ServiceBus)  
+
+Práctica: Creación Endpoint de servicio de subred con cuenta de almacenamiento a través del Portal.  
+
+- **Azure DNS**  
+Directorios asociados a las suscripciones. Subdominio de microsoft. Podemos cambiar el nombre.  
+Recurso DNS zones -> registrar DNS en el grupo de recursos.  
+DNS Record Sets: Colección de registros mismo tipo único, grupo de registros. Nos asigna 4 servidores de dominio. Delegados. Agregan zonas (subdominio) de recursos.  
+DNS para Dominios privados en Redes virtuales privadas. Personalizables. En todas las regiones.   
+
+Práctica: Creación zona DNS, Agregar conjunto de registros, servidores, métrica. Portal y PowerShell  
+
+- **Network Security Groups (NSG)**  
+Contenedores que agrupan conjuntos (suma) de reglas de seguridad de una red a nivel interfaz de red (capa 4).Se asocian a redes virtuales, como un firewall. Gestiona el tráfico entrante y saliente de los recursos, también en NIC MV. Ver Reglas efectivas.  
+
+Práctica: Creción NSG. Agregar nueva regla. Explorar.  
+
+Curso Finalizado.
